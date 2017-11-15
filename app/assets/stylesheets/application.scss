@@ -33,3 +33,15 @@ div#index-user-card-block{
 #user_id{
   width: 100%;
 }
+//sign up form
+#form-btns{
+  color:#212529;
+  border-color: #FF9966;
+  background-color: transparent;
+}
+
+#form-btns:hover{
+  color: #fff;
+  border-color: #FF9966;
+  background-color: #FF9966;
+}

@@ -11,21 +11,25 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav mx-auto">
 
-
-
-              <li class="nav-item dropdown mr-5">
-                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i id="navbar-profile-name"><%= '#''#' %> <%= '#''#' %></i>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <%= link_to 'Profile', '#', class:"dropdown-item" %>
-                  <%= link_to 'Build CV', '#', class:"dropdown-item" %>
-                  <%= link_to 'Sign Out', '#', method: :delete, class:"dropdown-item"%>
-                </div>
-              </li>
-
-              <li><%= link_to 'Sign In', '#', class:"nav-link" %></li>
-
+          <%if user_signed_in? %>
+            <li class="nav-item dropdown mr-5">
+              <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <% if current_user.first_name.nil? %>
+                    <i id="navbar-profile-name"><%= current_user.email %></i>
+                <% else %>
+                    <i id="navbar-profile-name"><%= current_user.first_name %> <%=  current_user.last_name  %></i>
+                <% end %>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <%= link_to 'Profile', '#', class:"dropdown-item" %>
+                <%= link_to 'Build CV', '#', class:"dropdown-item" %>
+                <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"dropdown-item"%>
+              </div>
+            </li>
+          <% else %>
+            <li><%= link_to 'Sign In', new_user_session_path, class:"nav-link" %></li>
+            <li><%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %></li>
+          <% end %>
 
         </ul>
       </div>
