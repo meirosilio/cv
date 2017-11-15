@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="dashboard-navbar">
+
+  <%= link_to 'CV', root_path, class: 'navbar-brand' %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mx-auto">
+
+
+
+              <li class="nav-item dropdown mr-5">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i id="navbar-profile-name"><%= '#''#' %> <%= '#''#' %></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <%= link_to 'Profile', '#', class:"dropdown-item" %>
+                  <%= link_to 'Build CV', '#', class:"dropdown-item" %>
+                  <%= link_to 'Sign Out', '#', method: :delete, class:"dropdown-item"%>
+                </div>
+              </li>
+
+              <li><%= link_to 'Sign In', '#', class:"nav-link" %></li>
+
+
+        </ul>
+      </div>
+
+    </ul>
+  </div>
+
+
+
+
+</nav>
