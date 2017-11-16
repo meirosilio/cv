@@ -1,0 +1,6 @@
+$('.modal-title').html("Edit Category");
+$('.modal-body').html('<%= j render("form") %>');
+$('.modal').modal("show");
+$('.modal').on("shown.bs.modal", function () {
+    $(".first_input").focus();
+});

@@ -1,0 +1,12 @@
+<tr id="category_<%=category.id%>">
+  <th scope="row"><%= category.id %></th>
+  <th><%= category.name %></th>
+  <th>
+    <p>
+      <%= link_to "Edit", edit_category_path(category), remote:true, class:"fa fa-pencil-square-o" %>
+      <%= link_to "Delete", category_path(category), method: :delete, data:{confirm:" Delete #{category.name} ?"},
+                  class: 'fa fa-trash-o' %>
+
+    </p>
+  </th>
+</tr>

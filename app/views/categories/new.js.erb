@@ -1,0 +1,7 @@
+
+$('.modal-title').html("<i class='fa fa-plus'></i> New Category");
+$('.modal-body').html('<%= j render("form") %>');
+$('.modal').modal("show");
+$('.modal').on("shown.bs.modal", function () {
+   $('.first_input').focus()
+});

@@ -1,0 +1,29 @@
+<%= render :layout => '/shared/dashboard_main.html.erb' do %>
+    <div class="row">
+      <div class="col-md-10">
+        <legend>Manage Your Categories:</legend>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-10"></div>
+      <div class="col-md-2 mx-auto">
+        <%= link_to "New Category", new_category_path, remote:true, class:"btn btn-primary" %>
+      </div>
+    </div>
+
+    <table class="table table-striped my-2">
+      <thead>
+        <th>Id</th>
+        <th>Experience Category Name</th>
+        <th>Actions</th>
+      </thead>
+
+      <tbody id="categories">
+        <%= render @categories %>
+      </tbody>
+    </table>
+
+    <%= render 'categories/dialog' %>
+
+<% end %>
