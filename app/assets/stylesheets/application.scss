@@ -1,9 +1,40 @@
 @import "bootstrap";
 
+/*flash*/
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+}
+
+.alert-alert {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+}
+
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}
+
+.alert-notice {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}
+
 //home page
 div.jumbotron.jumbotron-fluid{
   background-color: rgba(255, 153, 102, 0.51);
   color: #212529;
+  margin-top: -1px;
+
 }
 h4.card-title.mx-2.mt-2{
   color: #FF9966;
