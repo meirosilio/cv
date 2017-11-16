@@ -10,21 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171115152935) do
+ActiveRecord::Schema.define(version: 20171116153818) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "categorizations", force: :cascade do |t|
-    t.integer "experience_id"
-    t.integer "category_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_categorizations_on_category_id"
-    t.index ["experience_id"], name: "index_categorizations_on_experience_id"
   end
 
   create_table "experience_skills", force: :cascade do |t|
@@ -45,6 +36,8 @@ ActiveRecord::Schema.define(version: 20171115152935) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "category_id"
+    t.index ["category_id"], name: "index_experiences_on_category_id"
     t.index ["user_id"], name: "index_experiences_on_user_id"
   end
 

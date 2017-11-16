@@ -1,0 +1,16 @@
+<tr>
+  <th scope="row"><%= experience.id %></th>
+  <th><%= experience.category.name %></th>
+  <th><%= experience.name %></th>
+  <th><%= experience.position %></th>
+  <th><%= experience.start_date %></th>
+  <th><%= experience.end_date %></th>
+  <th><%= experience.description %></th>
+  <th>
+    <p>
+      <%= link_to "", edit_experience_path(experience),class:"fa fa-pencil-square-o" %>
+      <%= link_to "", experience_path(experience), method: :delete, data:{confirm:" Delete #{experience.name} ?"},
+                  class: 'fa fa-trash-o' %>
+    </p>
+  </th>
+</tr>

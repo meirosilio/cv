@@ -1,5 +1,6 @@
 @import "bootstrap";
 @import "font-awesome";
+@import "bootstrap-datepicker3";
 
 /*flash*/
 .alert-error {
@@ -43,12 +44,16 @@
   color: #FF9966;
 }
 
-
-
 .btn.btn-primary:hover {
   color: #fff;
   border-color: #FF9966;
   background-color: #FF9966;
+}
+
+//table
+th{
+  font-family: 'Sintony', sans-serif;
+  font-size:80%;
 }
 
 //home page
@@ -91,7 +96,7 @@ div#index-user-card-block{
   left: 220px;
   width: 220px;
   background: rgb(255, 255, 255);
-  position: fixed;
+  position:absolute;
   height: 100%;
   overflow-y: auto;
   z-index: 1000;
@@ -112,7 +117,8 @@ div#index-user-card-block{
   padding: 0;
 }
 
-.Dashboard-sidebar{
+.Dashboard-sidebar:any-link{
+  text-decoration: none;
   font-size: 80%;
   padding: 20px;
   margin-left: 20%;

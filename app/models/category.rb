@@ -1,12 +1,13 @@
 class Category < ApplicationRecord
-  has_many :categorizations
 
+  has_many :experiences
   validates :name , presence: true
-  before_save upcase
+  before_save :upercase
 
   private
-  def upcase
+  def upercase
     self.name.upcase!
   end
-  
+
+
 end

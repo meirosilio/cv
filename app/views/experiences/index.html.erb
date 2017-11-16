@@ -1,0 +1,35 @@
+<%= render :layout => '/shared/dashboard_main.html.erb' do %>
+    <div class="row">
+      <div class="col-md-10">
+        <legend>Manage Your Experiences:</legend>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-10"></div>
+      <div class="col-md-2 mx-auto">
+        <%= link_to "New Experience", new_experience_path, class:"btn btn-primary" %>
+      </div>
+    </div>
+
+    <table class="table table-striped my-2">
+      <thead>
+      <th>Id</th>
+      <th>Category</th>
+      <th>Experience Name</th>
+      <th>Position</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Description</th>
+      <th>Actions</th>
+      </thead>
+
+      <tbody id="experiences">
+      <%= render @experiences %>
+      </tbody>
+    </table>
+    <%= will_paginate @experiences, renderer: BootstrapPagination::Rails %>
+
+<% end %>
+
+
